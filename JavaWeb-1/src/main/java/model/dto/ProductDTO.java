@@ -4,9 +4,11 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@NoArgsConstructor
-@AllArgsConstructor
 @Data
-public class OrderDTO {
-	private String message;
+@AllArgsConstructor
+@NoArgsConstructor
+
+public class ProductDTO {
+	private String item;
+	private Integer price;
 }
