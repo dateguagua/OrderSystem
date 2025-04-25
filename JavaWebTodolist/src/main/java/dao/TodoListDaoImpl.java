@@ -36,7 +36,7 @@ public class TodoListDaoImpl extends BaseDao implements TodoListDAO {
 			e.printStackTrace();
 		}
 		
-		return null;
+		return todos;
 	}
 
 	@Override
