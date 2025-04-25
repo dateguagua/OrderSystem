@@ -22,4 +22,15 @@ public class OrderDAO {
 	public void remove(int index) {
 		orders.remove(index);
 	}
+	
+	//修改一筆資料
+	public void update(int index, Order newOrder)
+	{
+		orders.set(index, newOrder);
+	}
+	
+	//取得單筆資料
+	public Order getOrder(int index) {
+		return orders.get(index);
+	}
 }

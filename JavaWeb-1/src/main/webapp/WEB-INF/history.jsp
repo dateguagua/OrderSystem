@@ -22,7 +22,7 @@
 					<table class="pure-table pure-table-bordered">
 					<thead>
 						<tr>
-							<th>Index</th><th>Item</th><th>Delete</th>
+							<th>Index</th><th>Item</th><th>Delete</th><th>Edit</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -31,7 +31,7 @@
 								<td>${row.count}</td>
 								<td>${dto.message}</td>
 								<td><a href ="/JavaWeb-1/order/delete?index=${row.index}" class="button-error pure-button">X</a></td>
-								
+								<td><a href ="/JavaWeb-1/order/update?index=${row.index}" class="button-success pure-button">✏️</a></td>
 							</tr>
 						</c:forEach>
 					</tbody>

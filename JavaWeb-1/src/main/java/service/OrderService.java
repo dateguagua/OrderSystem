@@ -16,6 +16,7 @@ public class OrderService {
 		// 1.新增一筆訂單
 		Order order = new Order();
 		order.setItem(item);
+		
 		//order.setPrice(100); //價格一律100
 		order.setPrice(productDAO.getProduct(item).getPrice());
 		
@@ -52,8 +53,20 @@ public class OrderService {
 		orderDAO.remove(index);
 		//回報結果
 		OrderDTO orderDTO =new OrderDTO();
-		orderDTO.setMessage("index=" +index+".資料刪除成功");
+		orderDTO.setMessage("index=" +(index+1)+".資料刪除成功");
 		return orderDTO;
 				}
+	
+	//Update
+	public OrderDTO updatOrder(int index, String newItem) {
+		Order order = orderDAO.getOrder(index);
+		order.setItem(newItem);
+		orderDAO.update(index, order);
+		
+		//回報結果
+		OrderDTO orderDTO=new OrderDTO();
+		orderDTO.setMessage("index=" +index+".資料修改成功");
+		return orderDTO;
+	}
 	
 }
